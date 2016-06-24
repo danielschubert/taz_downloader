@@ -14,7 +14,7 @@ def dl(uri)
   http.use_ssl = true
   http.verify_mode = OpenSSL::SSL::VERIFY_PEER
 
-  data = URI.encode_www_form({'password' => 'thmupj', 'name' => '118321', 'Laden' => 'Laden', 'id'=>file})
+  data = URI.encode_www_form({'password' => 'YOUR_PASSWORD', 'name' => 'YOUR_USERNAME', 'Laden' => 'Laden', 'id'=>file})
 
   File.open(file , 'w') {|f|
     http.post(uri.path, data) do |str|
